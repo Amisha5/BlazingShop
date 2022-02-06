@@ -1,0 +1,84 @@
+﻿@model Blazingshop.DomainModel.Models.Product
+@{
+    ViewBag.Title = "EditProduct";
+}
+
+<h2>EditProduct</h2>
+
+<body style="background-color:aliceblue;">
+
+    <div class="col-md-10 mx-auto py-4 px-4" style="box-shadow: 5px 10px #888888;border-radius:15px">
+        <div class="card">
+            <div class="card-header bg-primary text-uppercase text-white">
+                <h4>Edit </h4>
+            </div>
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="card-body">
+                <form action="/Product/EditProduct/@Model.PId" method="post" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="ProductName" class="control-label">Name</label>
+                                <input name="ProductName" asp-for="ProductName" class="form-control" value="@Model.ProductName" />
+                                <span asp-validation-for="PName" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="Price" class="control-label">Price</label>
+                                <input name="Price" asp-for="Price" class="form-control" value="@Model.Price" />
+                                <span asp-validation-for="Price" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="ShadeColor" class="control-label">ShadeColor</label>
+                                <input name="ShadeColor" asp-for="ShadeColor" class="form-control" value="@Model.ShadeColor" />
+                                <span asp-validation-for="ShadeColor" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.CategoryId, "CategoryId", htmlAttributes: new { @class = "control-label col-md-2" })
+
+
+                                    <select asp-for="CategoryId" class="form-control" id="CategoryId" name="CategoryId" required>
+
+                                        <option value="">Please Select Category</option>
+                                        @foreach (var s in ViewBag.Cat)
+                                        {
+                                            <option value="@s.CId">@s.CategoryName</option>
+                                        }
+                                    </select>
+                                    @Html.ValidationMessageFor(model => model.CategoryId, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.files, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <input type="file" name="file" id="file" />
+                                @*@Html.EditorFor(model => model.Image, new { htmlAttributes = new { @class = "form-control", @type = "file" } })*@
+
+                                @Html.ValidationMessageFor(model => model.files, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" value="Edit" class="btn btn-sm btn-info rounded-0 text-uppercase">Edit</button>
+
+                        <a href="/Product/GetAllProduct" class="btn btn-sm btn-primary rounded-0 text-uppercase">Back to List</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>

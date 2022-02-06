@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Blazingshop.DomainModel.Models.Category>
+
+@{
+    ViewBag.Title = "GetCategories";
+}
+
+
+<body style="background-color:aliceblue;">
+    <div class="content px-4" style="margin-left:220px;">
+
+        <div class="container border p-3">
+            <div class="row">
+                <div class="col-5">
+                    <h3 class="text-info fa fa-list-ul fa-2x" >Category List</h3><br/>
+                </div>
+                <div class="col-3">
+                    <a href="/Category/Create" class="btn btn-info fa fa-plus-square" style="margin-top:30px;width:250px;height:40px;padding-top:10px;font-size:20px;">Add New Category</a>
+                </div>
+            </div>
+
+            <div class="row pt-4">
+                <table class="table table-striped" style="width:600px;height:150px;margin-top:30px;">
+                    <thead>
+                        <tr>
+                            <th class="bold" style="font-family:'Times New Roman';font-size:20px;">Category Name</th>
+                            <th class="fa fa-tasks">Action</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@Html.DisplayFor(modelItem => item.CategoryName)</td>
+                                <td>
+
+                               
+                                    @Html.ActionLink(" ", "Edit", "Category", new { id=@item.CId }, new { @class = "btn btn-success fa fa-edit" })
+                                    </td>
+                                <td>
+                                    @Html.ActionLink(" ", "Delete", "Category", new {id=@item.CId }, new { @class = "btn btn-danger fa fa-trash" })
+
+                                </td>
+                            </tr>
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,41 @@
+﻿@model Blazingshop.DomainModel.Models.Category
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+<body style="background-color:aliceblue;" >
+
+            <div class="col-md-10 mx-auto py-4 px-4">
+                <div class="card" style="box-shadow: 5px 10px #888888;border-radius:15px">
+                    <div class="card-header bg-primary text-uppercase text-white">
+                        <h4>Edit </h4>
+                    </div>
+                    <div class="card-body">
+                        <form action="/Category/Edit/@Model.CId" method="post" style="width:800px;">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label asp-for="CategoryName" class="control-label">Category Name</label>
+                                        <input type="text" name="CategoryName" id="CategoryName" value="@Model.CategoryName" class="form-control" />
+                                        <span asp-validation-for="CategoryName" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="form-group">
+
+                                <button type="submit" value="Edit" class="btn btn-sm btn-info rounded-0 text-uppercase">Edit</button>
+
+                                <a href="/Category/GetCategories" class="btn btn-sm btn-primary rounded-0 text-uppercase">Back to List</a>
+                                <br />
+                                <br />
+                            </div>
+                    </form>
+                </div>
+                </div>
+            </div>
+    </body>
+
+

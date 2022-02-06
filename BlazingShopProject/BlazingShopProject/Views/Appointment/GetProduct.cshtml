@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Blazingshop.DomainModel.Models.Product>
+@{
+    ViewBag.Title = "GetProduct";
+}
+
+
+<body style="background-color:aliceblue;">
+    <a href="~/Appointment/AppointmentList" class="btn btn-info" style="margin-left:150px">Appointment List</a>
+
+    <div class="container px-4">
+        <div class="row">
+
+            @foreach (var item in Model)
+            {
+
+                <div class="col-lg-3">
+                    <div class=" card-background card md-4" style="background:url('/Images/CardBg.jpg');width:200px; box-shadow: 5px 10px #888888;border-radius:15px">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-normal text-center">
+                                <label style="font-size:23px;color:steelblue;">@item.ProductName</label>
+                            </h4>
+                        </div>
+                        @if (item.files != null)
+                        {
+                            string imageBase64 = Convert.ToBase64String(item.files);
+                            string imageSrc = string.Format("data:image/jpg;base64,{0}", imageBase64);
+                            <img src="@imageSrc" width="160" height="100" style="margin-left:15px" />
+                        }
+                        <div class="btn-group">
+                            <label style="font-size:20px; color:#a51313; margin-left:15px; margin-top:10px;"><b>@item.Price.ToString("c")</b>/sq.ft</label>
+                            <a href="~/Appointment/GetProductById/@item.PId" class="btn btn-success pull-right btn-outline-info text-white d-flex justify-content-between align-items-center" style="margin-left:50px">Details</a>
+
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+            }
+        </div>
+    </div>
+</body>
+

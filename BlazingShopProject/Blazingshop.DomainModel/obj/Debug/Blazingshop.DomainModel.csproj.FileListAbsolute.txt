@@ -1,0 +1,6 @@
+D:\ADM21DF003\BlazingShopProject\Blazingshop.DomainModel\bin\Debug\Blazingshop.DomainModel.dll
+D:\ADM21DF003\BlazingShopProject\Blazingshop.DomainModel\bin\Debug\Blazingshop.DomainModel.pdb
+D:\ADM21DF003\BlazingShopProject\Blazingshop.DomainModel\obj\Debug\Blazingshop.DomainModel.csprojAssemblyReference.cache
+D:\ADM21DF003\BlazingShopProject\Blazingshop.DomainModel\obj\Debug\Blazingshop.DomainModel.csproj.CoreCompileInputs.cache
+D:\ADM21DF003\BlazingShopProject\Blazingshop.DomainModel\obj\Debug\Blazingshop.DomainModel.dll
+D:\ADM21DF003\BlazingShopProject\Blazingshop.DomainModel\obj\Debug\Blazingshop.DomainModel.pdb

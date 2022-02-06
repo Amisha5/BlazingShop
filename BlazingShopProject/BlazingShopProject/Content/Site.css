@@ -1,0 +1,159 @@
+﻿/*body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+   
+}
+
+ 
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+*/
+
+
+@import Url('../open-iconic/font/css/open-iconic-bootstrap.css');
+
+.sidebar {
+    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+    top:70px;
+}
+
+.sidebar {
+   /* margin-top:20px;*/
+    margin: -18px 0px;
+    padding: 0px;
+    width: 250px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    /* overflow: auto;*/
+}
+
+    .sidebar a {
+        display: block;
+        color: black;
+        padding: 16px;
+        text-decoration: none;
+    }
+
+        .sidebar a.active {
+            background-color: rgba(255,255,255,0.25);
+            color: white;
+        }
+
+        .sidebar a:hover:not(.active) {
+            background-color: rgba(255,255,255,0.1);
+            color: white;
+        }
+
+    /*.sidebar .oi {
+        width: 2rem;
+        font-size: 1.1rem;
+        vertical-align: text-top;
+        top: -2px;
+    }*/
+
+    .sidebar .nav-item {
+        font-size: 0.6em;
+        padding-bottom: 0.5rem;
+        margin-left:14px;
+        margin-right:14px;
+        margin-top:14px;
+    }
+
+        .sidebar .nav-item:first-of-type {
+            padding-top: 1rem;
+        }
+
+        .sidebar .nav-item:last-of-type {
+            padding-bottom: 1rem;
+        }
+
+        .sidebar .nav-item a {
+            color: #d7d7d7;
+            border-radius: 4px;
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            line-height: 3rem;
+        }
+
+            .sidebar .nav-item a.active {
+                background-color: rgba(255,255,255,0.25);
+                color: white;
+            }
+
+            .sidebar .nav-item a:hover {
+                background-color: rgba(255,255,255,0.1);
+                color: white;
+            }
+
+
+.pb-3 {
+    margin: 75px -80px 0px 116px;
+}
+
+@media screen and (max-width: 1060px) {
+    #primary {
+        width: 67%;
+    }
+
+    #secondary {
+        width: 30%;
+        margin-left: 3%;
+    }
+}
+
+/* Tabled Portrait */
+@media screen and (max-width: 768px) {
+    #primary {
+        width: 100%;
+    }
+
+    #secondary {
+        width: 100%;
+        margin: 0;
+        border: none;
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+html {
+    font-size: 100%;
+}
+
+@media (min-width: 640px) {
+    body {
+        font-size: 0.5rem;
+    }
+}
+
+@media (min-width:960px) {
+    body {
+        font-size: 1.0rem;
+    }
+}
+
+@media (min-width:1100px) {
+    body {
+        font-size: 1.0rem;
+    }
+}
+
+.px-4 {
+    margin-left: 130px;
+    margin-top:100px;
+}
+
+.navbar {
+    z-index: 9999;
+    overflow: hidden;
+    background-color: #666666;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}

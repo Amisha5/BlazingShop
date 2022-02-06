@@ -1,0 +1,9 @@
+D:\ADM21DF003\BlazingShopProject\BlazingShop.ServiceContract\bin\Debug\BlazingShop.ServiceContract.dll
+D:\ADM21DF003\BlazingShopProject\BlazingShop.ServiceContract\bin\Debug\BlazingShop.ServiceContract.pdb
+D:\ADM21DF003\BlazingShopProject\BlazingShop.ServiceContract\bin\Debug\Blazingshop.DomainModel.dll
+D:\ADM21DF003\BlazingShopProject\BlazingShop.ServiceContract\bin\Debug\Blazingshop.DomainModel.pdb
+D:\ADM21DF003\BlazingShopProject\BlazingShop.ServiceContract\obj\Debug\BlazingShop.ServiceContract.csprojAssemblyReference.cache
+D:\ADM21DF003\BlazingShopProject\BlazingShop.ServiceContract\obj\Debug\BlazingShop.ServiceContract.csproj.CoreCompileInputs.cache
+D:\ADM21DF003\BlazingShopProject\BlazingShop.ServiceContract\obj\Debug\BlazingShop.ServiceContract.csproj.CopyComplete
+D:\ADM21DF003\BlazingShopProject\BlazingShop.ServiceContract\obj\Debug\BlazingShop.ServiceContract.dll
+D:\ADM21DF003\BlazingShopProject\BlazingShop.ServiceContract\obj\Debug\BlazingShop.ServiceContract.pdb

@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Content/Site.css" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jqueryval")
+    
+    @*<link href="~/Content/font-awesome.min.css"/>
+        <link href="~/Content/fontawesome-all.css"/>*@
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" crossorigin="anonymous">
+  
+</head>
+<body>
+   
+    <header>
+        <nav class="navbar  navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3 text-white" style="background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%)">
+            <div class="container">
+                <a class="navbar-brand text-white" style="color:white;" asp-area="" asp-controller="Home" asp-action="Index">BlazingShop</a>
+                
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    @Html.Partial("_LoginPartial")
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="sidebar">
+        <ul class=" nav flex-column">
+            <li class="nav-item px-3">
+                <a class="active" href="~/Home/Index">
+                    <span class=" fa fa-home fa-2x" aria-hidden="true"></span>
+                    <h4 style="padding-left:10px;font-family:'Times New Roman'; font-weight:bold; font-size:20px;">Home</h4>
+
+                </a>
+
+            </li>
+            @if (User.Identity.Name == "admin@gmail.com")
+            {
+                <li class="nav-item px-3">
+                    <a class="active" href="/Category/GetCategories">
+                        <span class=" fa fa-list fa-2x" aria-hidden="true"></span>
+                        <h4 style="padding-left:10px;font-family:'Times New Roman'; font-weight:bold; font-size:20px;">Category</h4>
+
+
+                    </a>
+                </li>
+                <li class="nav-item px-3">
+                    <a class="active" href="/Product/GetAllProduct">
+                        <span class=" fa fa-shopping-bag fa-2x" aria-hidden="true"></span>
+                        <h4 style="padding-left:10px;font-family:'Times New Roman'; font-weight:bold; font-size:20px;">Product</h4>
+
+
+                    </a>
+                </li>
+
+                <li class="nav-item px-3">
+                    <a class="active" href="/Appointment/AppointmentList">
+                        <span class=" fa fa-calendar-plus fa-2x" aria-hidden="true"></span>
+                        <h4 style="padding-left:10px;font-family:'Times New Roman'; font-weight:bold; font-size:20px;">Appointments</h4>
+
+
+                    </a>
+                </li>
+            }
+            else
+            {
+                if (User.Identity.IsAuthenticated == true)
+                {
+                    <li class="nav-item px-3">
+                        <a class="active" href="/Appointment/GetProduct">
+
+                            <span class=" fa fa-calendar-check fa-2x" aria-hidden="true"></span>
+                            <h4 style="padding-left:5px;font-family:'Times New Roman'; font-weight:bold; font-size:20px;">TakeAppointment</h4>
+
+                        </a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="active" href="/Appointment/GetYourAppointment/@ViewBag.Aid">
+
+                            <span class=" fa fa-calendar-check fa-2x" aria-hidden="true"></span>
+                            <h4 style="padding-left:5px;font-family:'Times New Roman'; font-weight:bold; font-size:20px;">YourAppointments</h4>
+
+                        </a>
+                    </li>
+                }
+            }
+        </ul>
+        
+    </div>
+
+
+    <div class="container body-content ">
+
+        @RenderBody()
+        @*<hr />*@
+        @*<footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>*@
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
